@@ -1,0 +1,372 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.topdiv{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(./uniimg/banner.png);
+    
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+}
+.navbar{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar img{
+    width: 150px;
+}
+.rightnav {
+    flex: 1;
+    text-align: right;
+}
+
+.rightnav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+
+}
+.rightnav ul li a{
+    text-decoration: none;
+    color: beige;
+    font-size: 16px;
+}
+
+/* understand it */
+.rightnav ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+}
+
+.rightnav ul li:hover::after{
+    width: 100%;
+    transition-duration: 0.7s;
+}
+.textbox{
+    width: 90%;
+    color: white;
+    position: absolute;
+    text-align: center;
+
+    /* why its happening */
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,50% );
+    
+}
+.textbox h1{
+    font-size: 60px;
+}
+.textbox p{
+    font-size: 16px;
+    margin: 10px 0px 35px;
+}
+.button{
+    display: inline-block;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: transparent;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.button:hover{
+    border: 1px solid tomato;
+    background-color: tomato;
+    transition-duration: 0.8s;
+}
+.navbar i{
+    visibility: hidden;
+    
+}
+@media(max-width:700px){
+    .textbox h1 {
+        font-size: 20px;
+    }
+    /* .textbox p {
+        font-size: 17px;
+    } */
+    .rightnav ul li{
+        list-style: none;
+        display: block;
+        padding: 15px 0px 15px 10px;
+        text-align: left;
+        position: relative;
+    
+    }
+    .rightnav {
+        height: 100vh;
+        width: 200px;
+        position: absolute;
+        top: 0px;
+        right: -200px;
+        background-color: #f44336;
+        z-index: 1;
+        transition-duration: 1s;
+    }
+    .navbar i{
+        visibility: visible;
+        text-align: left;
+        color: #fff;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+}
+
+/*  -------course css--------  */
+.coursehead{
+    text-align: center;
+    margin: 25px 0;
+    padding: 40px 20px;
+}
+.coursehead h1{
+    font-size: 35px;
+}
+.coursebottom{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 40px 30px 40px;
+    
+}
+.row{
+    /* border: 1px solid black; */
+    width: 25%;
+    border-radius: 8px;
+    background-color: rgb(245, 228, 224);
+    text-align: center;
+    padding:10px ;
+    
+    transition-duration: 0.6s;
+}
+.row h3{
+    padding: 20px 10px;
+    font-size: 20px;
+}
+.row:hover{
+    box-shadow: 0px 0px 10px rgb(144, 140, 140);
+    transform: scale(1.11);
+}
+@media(max-width:700px){
+
+    .coursebottom{
+        display: flex;
+        flex-direction: column;
+        align-items: space-evenly;
+        width: 80%;
+        margin: auto;
+    }
+    .row{
+        
+        width: 80%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        /* justify-content: center; */
+        /* align-items: center; */
+        
+    }
+}
+
+/*  -------campus css--------  */
+.campushead{
+    text-align: center;
+    margin: 25px 0;
+    padding: 40px 20px;
+}
+.campushead h1{
+    font-size: 35px;
+}
+.campusbottom{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 40px 30px 40px;
+    
+}
+.campusbottom img{
+    width:25% ;
+    border-radius: 18px;
+    padding: 10px;
+}
+
+@media(max-width:700px){
+    .campusbottom{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        
+    }
+    .campusbottom img{
+        width:80% ;
+        margin: auto;
+    }
+}
+
+/* --------------facility css----------------  */
+.factop{
+    text-align: center;
+    margin: 25px 0;
+    padding: 40px 20px;
+}
+.factop h2{
+    font-size: 35px;
+}
+.facbottom{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 40px 30px 40px;
+    
+}
+.facrow {
+    width: 28%;
+    border-radius: 12px;
+    padding: 10px;
+    transition-duration: 1s;
+}
+.facrow h3{
+    margin: 10px 0px;
+    font-size: 25px;
+    color: rgb(109, 109, 109);
+}
+.facrow p{
+    color: gray;
+}
+.facrow:hover{
+    box-shadow: 0px 0px 10px rgb(185, 184, 184);
+    transform: scale(1.1);
+}
+.facrow img{
+    width:100% ;
+    border-radius: 12px;
+}
+
+@media(max-width:700px){
+    .facbottom{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+       
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .facrow {
+        width: 80%;
+        padding: 20px 30px;
+    }
+}
+
+
+/* --------------testimonial css----------------  */
+.testhead{
+    text-align: center;
+    margin: 25px 0;
+    color: rgb(98, 96, 96);
+}
+.testbottom{
+    display: flex;
+    justify-content: space-around;
+    gap: 7%;
+    margin: 0% 10% 10%;
+    
+}
+.testrow img{
+    width: 40%;
+    height: 20%;
+    border-radius: 50%;
+}
+.testrow{
+    display: flex;
+    background-color: rgb(246, 231, 231);
+    border-radius: 12px;
+    padding: 3%;
+    transition-duration: 1s;
+}
+.testtext{
+    margin: 2% 5%;
+    color: rgb(132, 128, 128);
+}
+.testtext h3{
+    font-size: 22px;
+}
+.testtext i{
+   color: #f44336;
+   font-size: 10px;
+   margin: auto;
+}
+.testrow:hover{
+    box-shadow: 0px 0px 10px rgb(185, 184, 184);
+    transform: scale(1.06);
+}
+@media(max-width:700px){
+    .testbottom{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .testrow{
+        
+        margin-bottom: 8%;
+    }
+    .testrow img{
+        width: 10%;
+        height: 5%;
+        border-radius: 50%;
+    }
+}
+
+/* -----------our enrollment page----------  */
+.enroll{
+    width: 80%;
+    margin: auto;
+    min-height: 400px;
+    background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(./uniimg/banner2.jpg);
+    background-position: center;
+    background-size:cover ;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8%;
+    border-radius: 10px;
+    margin-bottom: 40px;
+  
+    
+}
+.enroll img{
+    
+}
+
+/* <!-- ---------footer--------- --> */
+.foot{
+    text-align: center;
+    padding: 4% 20%;
+}
+.foot p{
+    color: gray;
+    padding-top: 2%;
+}
+.foot i{
+    color: #f44336;
+    
+}
+.fa-brands{
+    margin: 0 10px;
+    font-size: large;
+}
